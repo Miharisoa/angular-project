@@ -1,0 +1,93 @@
+ 
+
+<div class="row">
+    <div class="col-12">
+        <h3>Post</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6">
+        <app-post-form-view></app-post-form-view>
+    </div>
+    <div class="col-12 col-md-6 pt-3 pt-md-0">
+        <app-post-list [posts]="posts"></app-post-list>
+    </div>
+</div>
+
+  
+  
+  <!-- <router-outlet></router-outlet>-->
+  <!-- <div class="container">
+    <mat-toolbar color="" class="indigo">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+    </mat-toolbar>
+    <div class="row py-4">
+      <div class="col-12 col-md-6">
+        <h3>New Post</h3>
+  
+        <form [formGroup]="postForm" (ngSubmit)="onSubmitForm(formDirective)" #formDirective="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Title <sup>*</sup></mat-label>
+            <input formControlName="title" matInput>
+            <mat-error *ngIf="submitted && f.title.errors">                          
+                <p *ngIf="submitted && f.title.errors.required">You must fill this field</p>
+                <p *ngIf="submitted && f.title.errors.minlength">So short</p>
+                <p *ngIf="submitted && f.title.errors.maxlength">The title is so long</p>
+            </mat-error>
+          </mat-form-field>
+          <br />
+          <mat-form-field appearance="fill">
+            <mat-label>Content <sup>*</sup></mat-label>
+            <textarea matInput formControlName="content"></textarea>
+            <mat-error *ngIf="submitted && f.content.errors">
+                <p *ngIf="submitted && f.content.errors.required">You must fill this field</p>
+                <p *ngIf="submitted && f.content.errors.minlength">So short</p>
+                <p *ngIf="submitted && f.content.errors.maxlength">The content is so long</p>
+            </mat-error>
+          </mat-form-field>
+          <br />
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Love it number <sup>*</sup></mat-label>
+            <input matInput type="number" formControlName="like">
+            <mat-error *ngIf="submitted && f.like.errors">
+              <p *ngIf="submitted && f.like.errors.required">You must fill this field</p>
+              <p *ngIf="submitted && f.like.errors.pattern">Please enter a number</p>            
+            </mat-error>          
+          </mat-form-field>
+          <br />
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Contact <sup>*</sup></mat-label>
+            <input matInput type="text" placeholder="00 00 00 00 00" formControlName="contact" maxlength="14" appFormatSpaceInput>
+            <mat-error *ngIf="submitted && f.contact.errors">
+              <p *ngIf="submitted && f.contact.errors.required">You must fill this field</p>
+              <p *ngIf="submitted && f.contact.errors.pattern">Please enter a valid contact</p>            
+            </mat-error>          
+          </mat-form-field>
+          <br />
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Email <sup>*</sup></mat-label>
+            <input matInput placeholder="tonemail@example.com" formControlName="email">
+            <mat-error *ngIf="submitted && f.email.errors">
+              <p *ngIf="submitted && f.email.errors.required">You must enter value</p>
+              <p *ngIf="submitted && f.email.errors.pattern">Please enter a valid email</p>
+            </mat-error>
+          </mat-form-field>
+  
+          <div class="mt-2">
+            <button mat-raised-button class="mx-2" type="submit">Save</button>
+            <button mat-raised-button class="mx-2" type="reset" (click)="onReset()">Reset</button>
+          </div>
+        </form>
+        
+      </div>
+      <div class="col-12 col-md-6">
+         <app-post-list [posts]="posts"></app-post-list>
+      </div>    
+    </div>
+  </div> -->

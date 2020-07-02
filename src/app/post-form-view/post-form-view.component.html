@@ -1,6 +1,6 @@
 <form [formGroup]="postsForm" (ngSubmit)="onSubmitForm(formDirective)" #formDirective="ngForm" novalidate>
     <fieldset class="border py-2 px-3" formArrayName="items" *ngFor="let item of f.items.controls; let i = index;">
-        <legend class="w-auto">New post</legend>
+        <legend class="w-auto" style="font-size:20px;">New post</legend>
         <div [formGroupName]="i">
             <div class="form-group">
                 <label for="Title">Title <sup>*</sup></label>

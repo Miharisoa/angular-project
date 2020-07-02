@@ -11,6 +11,7 @@ import { PostService } from './services/post.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormatSpaceInputDirective } from './format-space-input.directive';
 import { PostFormViewComponent } from './post-form-view/post-form-view.component';
+import { PostsViewComponent } from './posts-view/posts-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostFormViewComponent } from './post-form-view/post-form-view.component
     PostListComponent,
     PostListItemComponent,
     FormatSpaceInputDirective,
-    PostFormViewComponent
+    PostFormViewComponent,
+    PostsViewComponent
   ],
   imports: [
     BrowserModule,
