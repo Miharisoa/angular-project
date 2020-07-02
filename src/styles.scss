@@ -13,6 +13,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color:white;
 }
 
+.green{
+    color:white;
+    background-color: #57A834;
+}
+
+.text-green{
+    color: #57A834;
+}
+
+.indigo-dark{
+    color:white;
+    background-color: #360532;
+}
+
+.black{
+    color:white;
+    background-color: black;
+}
+
 .liste .mat-list-item{
     height: 100% !important;
     box-shadow: 2px 0px 2px 2px lightgrey;
@@ -27,6 +46,6 @@ mat-form-field.mat-form-field {
     background-color: white !important;
 }
 
-sup{
+sup,.error{
     color:red;
 }

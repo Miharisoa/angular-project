@@ -6,7 +6,7 @@ export class PostService{
 
     constructor(){
         this.posts = [
-            new Post("Post 1 ","This is my first post.",0, "00 00 00 00 00"),            
+            new Post("Post 1 ","This is my first post."),            
         ]
     }
 

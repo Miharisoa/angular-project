@@ -1,17 +1,10 @@
-<!-- <mat-card class="card">
-    <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-subtitle>{{post.created_at|date: 'dd/MM/yyyy hh:mm:ss'}}</mat-card-subtitle>
-    <mat-card-content>{{post.content}}</mat-card-content>
-</mat-card> -->
-
-<div>
+<li class="list-group-item pb-0">
     <h5>{{post.title}}</h5>
     <small>{{post.created_at|date: 'dd/MM/yyyy hh:mm:ss'}}</small>
-    <p>
-        {{post.content}} <br>
-        <small> Contact : {{post.contact}} <span *ngIf="post.email" class="mx-2">Email : {{post.email}}</span> </small>
-    </p>    
-    <button mat-raised-button class="mx-2" (click)="post.like()">{{post.loveIts}} Love it</button>
-    <button mat-raised-button color="warn" (click)="post.dislike()">{{post.hateIts}} Don't love it</button>
-</div>
+    <p class="text-justify">
+        <small>{{post.content}}</small> <br>
+        <a class="mx-2" style="color:grey;" (click)="post.like()">{{post.loveIts}} <i class="fa fa-thumbs-up"></i></a>
+        <a class="mx-2" style="color:orangered;" (click)="post.dislike()">{{post.hateIts}} <i class="fa fa-thumbs-down"></i></a>         
+    </p>        
+</li>
 

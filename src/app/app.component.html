@@ -1,11 +1,74 @@
-<mat-toolbar color="" class="indigo">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+<!-- <nav class="navbar navbar-light black">
+  <a class="navbar-brand text-white" href="#">
+    <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Myapp
+  </a>
+  
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light black">
+  <a class="navbar-brand text-white" href="#">
+    <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30"
+      class="d-inline-block align-top" alt="Logo">
+    Myapp
+  </a>
+  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
   </button>
-  <span>My App</span>
-</mat-toolbar>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-white" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-white" href="#">Posts</a>
+      <a class="nav-item nav-link text-white" href="#">Users</a>      
+    </div>
+  </div>
+</nav>
 
-<div class="container">
+<div class="container p-4">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <app-post-form-view></app-post-form-view>      
+      
+      <!-- <form [formGroup]="postForm" (ngSubmit)="onSubmitForm(formDirective)" #formDirective="ngForm">
+        <fieldset class="border py-2 px-3">
+          <legend class="w-auto">New post</legend>
+          <div class="form-group">
+            <label for="Title">Title <sup>*</sup></label>
+            <input type="text" class="form-control" id="Title" formControlName="title">
+            <small *ngIf="submitted && f.title.errors" class="error">
+              <p *ngIf="submitted && f.title.errors.required">You must fill this field</p>
+              <p *ngIf="submitted && f.title.errors.minlength">Title must be at least 2 characters</p>
+              <p *ngIf="submitted && f.title.errors.maxlength">The title is so long</p>
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="content">Content <sup>*</sup></label>
+            <textarea class="form-control" id="content" rows="2" formControlName="content"></textarea>
+            <small *ngIf="submitted && f.content.errors" class="error">
+              <p *ngIf="submitted && f.content.errors.required">You must fill this field</p>
+              <p *ngIf="submitted && f.content.errors.minlength">The content must be at least 3 characters</p>
+              <p *ngIf="submitted && f.content.errors.maxlength">The content is so long</p>
+            </small>
+          </div>
+          <button class="btn indigo btn-sm float-right">Add other post</button>  
+        </fieldset>              
+        <button type="submit" class="my-2 btn green btn-sm">Submit all post</button>
+      </form> -->
+    </div>
+    <div class="col-12 col-md-6 pt-3 pt-md-0">
+      <app-post-list [posts]="posts"></app-post-list>
+   </div> 
+  </div>
+</div>
+
+
+<!-- <router-outlet></router-outlet>-->
+<!-- <div class="container">
+  <mat-toolbar color="" class="indigo">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+  </mat-toolbar>
   <div class="row py-4">
     <div class="col-12 col-md-6">
       <h3>New Post</h3>
@@ -72,4 +135,4 @@
        <app-post-list [posts]="posts"></app-post-list>
     </div>    
   </div>
-</div>
+</div> -->

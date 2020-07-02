@@ -1,6 +1,4 @@
 <h3>All posts</h3>
-<mat-list role="list" class="liste">
-    <mat-list-item class="liste-item py-3 px-4" role="listitem" *ngFor="let post of posts; let i=index">
-        <app-post-list-item [post]="post"></app-post-list-item>        
-    </mat-list-item>    
-</mat-list>
+<ul class="list-group list-group-flush">
+    <app-post-list-item *ngFor="let post of posts; let i=index" [post]="post"></app-post-list-item>    
+</ul>

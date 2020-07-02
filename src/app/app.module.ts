@@ -10,13 +10,15 @@ import { PostListItemComponent } from './post-list-item/post-list-item.component
 import { PostService } from './services/post.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormatSpaceInputDirective } from './format-space-input.directive';
+import { PostFormViewComponent } from './post-form-view/post-form-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
     PostListItemComponent,
-    FormatSpaceInputDirective
+    FormatSpaceInputDirective,
+    PostFormViewComponent
   ],
   imports: [
     BrowserModule,

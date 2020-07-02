@@ -1,0 +1,35 @@
+<form [formGroup]="postsForm" (ngSubmit)="onSubmitForm(formDirective)" #formDirective="ngForm" novalidate>
+    <fieldset class="border py-2 px-3" formArrayName="items" *ngFor="let item of f.items.controls; let i = index;">
+        <legend class="w-auto">New post</legend>
+        <div [formGroupName]="i">
+            <div class="form-group">
+                <label for="Title">Title <sup>*</sup></label>
+                <input type="text" class="form-control" id="Title" formControlName="title">
+                <small *ngIf="submitted && item['controls'].title.errors" class="error">
+                    <p *ngIf="submitted && item['controls'].title.errors.required">You must fill this field</p>
+                    <p *ngIf="submitted && item['controls'].title.errors.minlength">Title must be at least 2 characters
+                    </p>
+                    <p *ngIf="submitted && item['controls'].title.errors.maxlength">The title is so long</p>
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="content">Content <sup>*</sup></label>
+                <textarea class="form-control" id="content" rows="2" formControlName="content"></textarea>
+                <small *ngIf="submitted && item['controls'].content.errors" class="error">
+                    <p *ngIf="submitted && item['controls'].content.errors.required">You must fill this field</p>
+                    <p *ngIf="submitted && item['controls'].content.errors.minlength">The content must be at least 3
+                        characters</p>
+                    <p *ngIf="submitted && item['controls'].content.errors.maxlength">The content is so long</p>
+                </small>
+            </div>
+        </div>
+
+        <button *ngIf="items.controls.length>1" class="btn btn-danger btn-sm float-right"><i
+                (click)="removeItemPostsForm(i)" class="fa fa-trash"></i></button>
+    </fieldset>
+    <button class="btn indigo btn-sm float-right m-2" (click)="addItemPostsForm()"><i class="fa fa-plus"></i> Add other
+        post</button>
+    <button type="submit" class="btn btn-sm my-2"
+        [ngClass]="{'btn-primary': !postsForm.invalid,'btn-secondary': postsForm.invalid}"
+        [disabled]="postsForm.invalid">Submit all posts</button>
+</form>

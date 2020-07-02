@@ -7,11 +7,11 @@ export class Post {
     email: string;
     created_at: Date;
 
-    constructor(title: string, content: string, loveIts: number,contact: string) {
+    constructor(title: string, content: string) {
         this.title = title; 
         this.content = content;
-        this.loveIts = loveIts;
-        this.contact = contact;
+        this.loveIts = 0;
+        // this.contact = contact;
         this.created_at = new Date();
     }
 
